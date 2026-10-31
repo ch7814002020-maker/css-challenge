@@ -1,0 +1,142 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+/* Common Section */
+.section {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.section > p {
+    margin-bottom: 25px;
+}
+
+/* Exercise 1: Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.flex-card {
+    flex: 1;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000015;
+    transition: transform 0.3s ease;
+}
+
+.flex-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.flex-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Exercise 2: CSS Grid */
+.grid-section {
+    background: #e2e8f0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background: #2563eb;
+    color: white;
+    padding: 35px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.grid-item:hover {
+    background: #172554;
+}
+
+/* Exercise 3: Animation */
+.animated-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.animated-button:hover {
+    background: #172554;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+}
